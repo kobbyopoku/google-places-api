@@ -6,6 +6,8 @@
 package app.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
@@ -16,8 +18,10 @@ import javax.persistence.Id;
 public class PlacesData {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String area;
     private String place_id;
     private String name;
     private String website;
@@ -33,6 +37,14 @@ public class PlacesData {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getArea() {
+        return area;
+    }
+
+    public void setArea(String area) {
+        this.area = area;
     }
 
     public String getPlace_id() {
@@ -103,9 +115,5 @@ public class PlacesData {
     public String toString() {
         return "PlacesData{" + "id=" + id + ", place_id=" + place_id + ", name=" + name + ", website=" + website + ", phone=" + phone + ", address=" + address + ", vicinity=" + vicinity + ", longitude=" + longitude + ", latitude=" + latitude + '}';
     }
-
-
-    
-    
 
 }

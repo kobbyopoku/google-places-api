@@ -1,7 +1,6 @@
 package app.repository;
 
 import app.model.PlacesData;
-import app.model.PlacesRequest;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
